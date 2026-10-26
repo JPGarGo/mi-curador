@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Curador</title>
+<style>
+  :root { --bg:#0f1115; --card:#181b22; --txt:#e8e8ea; --sub:#9aa0aa; --acc:#f5b942; --ok:#3ecf8e; --mid:#5aa9ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap { max-width:900px; margin:0 auto; padding:24px 16px; }
+  header h1 { margin:0; font-size:28px; }
+  header p { color:var(--sub); margin:4px 0 0; }
+  .filtros { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; }
+  .filtros button { background:var(--card); color:var(--txt); border:1px solid #2a2f3a; border-radius:999px; padding:6px 14px; cursor:pointer; }
+  .filtros button.activo { background:var(--acc); color:#111; border-color:var(--acc); }
+  h2 { font-size:20px; margin:32px 0 12px; color:var(--acc); }
+  .card { display:flex; gap:16px; background:var(--card); border-radius:12px; padding:16px; margin-bottom:14px; }
+  .card img { width:200px; height:112px; object-fit:cover; border-radius:8px; flex-shrink:0; }
+  .meta { color:var(--sub); font-size:14px; }
+  .card h3 { margin:6px 0 8px; font-size:18px; line-height:1.3; }
+  .card h3 a { color:var(--txt); text-decoration:none; }
+  .card h3 a:hover { text-decoration:underline; }
+  .nota { display:inline-block; font-weight:700; border-radius:6px; padding:2px 8px; margin-right:8px; }
+  .n-alta { background:var(--ok); color:#06210f; }
+  .n-media { background:var(--mid); color:#04182e; }
+  .n-baja { background:#2a2f3a; color:var(--sub); }
+  ul { margin:8px 0; padding-left:20px; }
+  .rigor { font-size:14px; color:var(--sub); }
+  .hobby { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+  .hobby a { color:var(--txt); text-decoration:none; font-size:14px; }
+  .hobby img { width:100%; border-radius:8px; }
+  @media (max-width:600px) { .card { flex-direction:column; } .card img { width:100%; height:auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🎬 Mi Curador</h1>
+    <p>Actualizado el 26/10/2026 22:06 · 13 videos analizados</p>
+  </header>
+
+  <div class="filtros">
+    <button class="activo" data-tema="todos">Todos</button>
+    <button data-tema="economía">Economía</button><button data-tema="geopolítica">Geopolítica</button><button data-tema="historia">Historia</button><button data-tema="otro">Otro</button>
+  </div>
+
+  
+  <h2>⭐ Imprescindibles</h2>
+  
+  <article class="card" data-tema="economía">
+    <a href="https://www.youtube.com/watch?v=uLEORI_PVgI" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/uLEORI_PVgI/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-alta">8/10</span>
+        Fortune of Nations Animated · 9 min · economía
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=uLEORI_PVgI" target="_blank" rel="noopener">Why Build a $500 Billion AI Fortress in Ohio&#39;s Uranium Town?</a></h3>
+      <p>El video recorre la historia de Piketon, Ohio, desde la planta federal de enriquecimiento de uranio de 1952 hasta el campus de centros de datos de IA de unos 8 GW que OpenAI planea arrendar allí. Explica por qué la infraestructura eléctrica, el terreno federal y la aceptación local hacen de este sitio un lugar atractivo para la IA, y cómo se financian la energía y las líneas de transmisión. Cierra con los riesgos y la pregunta de qué se queda la comunidad cuando el proyecto termine.</p>
+      <ul><li>La planta de 1952 requería más de 2.000 MW, y su red eléctrica (dos centrales de carbón de unos 2.400 MW, con 7,5 millones de toneladas de carbón al año) explica por qué el sitio ya tiene una conexión que la IA ahora necesita. La planta se terminó en 1956, unos meses antes de lo previsto y con cerca de un tercio menos de presupuesto.</li><li>Las cifras del proyecto actual: unos 8 GW durante 20 años y un costo estimado de más de 500.000 millones de dólares. Japón aporta 33.300 millones para 9,2 GW de plantas de gas, SB Energy 4.200 millones en líneas de alta tensión y Nvidia 1.500 millones, con una garantía de hasta 105.000 millones si OpenAI dejara de pagar el arriendo.</li><li>Las reglas de Ohio obligan a los nuevos centros de datos a pagar al menos el 85% de la energía que reservan, durante hasta 12 años. Después de esa regla, la cola de solicitudes de AEP Ohio bajó de 30 GW a 13 GW. Esto muestra cómo la regulación local redistribuye el riesgo entre empresas tecnológicas y hogares.</li></ul>
+      <p class="rigor">📊 Usa muchas cifras específicas, fechas y comparaciones, y distingue entre datos confirmados y estimaciones (&#39;según algunas estimaciones&#39;, &#39;reportedly&#39;), pero la transcripción no cita fuentes concretas (informes, documentos regulatorios o cifras oficiales) y varias cifras económicas quedan sin respaldo visible.<br>💡 Conecta historia industrial, energía, geopolítica y economía local con datos abundantes y contexto histórico sólido, lo que lo acerca al estándar de Geekonomy; su principal debilidad es la falta de fuentes citadas explícitamente.</p>
+    </div>
+  </article>
+  
+  <h2>👍 Vale la pena</h2>
+  
+  <article class="card" data-tema="otro">
+    <a href="https://www.youtube.com/watch?v=eyZEqSPeMwg" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/eyZEqSPeMwg/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-alta">7/10</span>
+        Veritasium · 34 min · otro
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=eyZEqSPeMwg" target="_blank" rel="noopener">No device could prove Einstein wrong... until now</a></h3>
+      <p>El video sigue el experimento del NIST y su equipo para comparar dos relojes atómicos ópticos, uno en Boulder y otro a 4.326 m en Mount Blue Sky, con el fin de medir la dilatación temporal gravitacional predicha por la relatividad general. Explica con claridad los fundamentos del reloj atómico, el enfriamiento láser, la red óptica y el peine de frecuencias, y también presenta un proyecto australiano para enlazar relojes desde helicópteros y satélites. No hay resultados todavía: el propio equipo afirma que no tiene evidencia contra Einstein.</p>
+      <ul><li>Según la relatividad general, un reloj situado a 2,7 km más de altura debería ganar unas 25 mil millonésimas de segundo cada día. El experimento busca medir una diferencia predicha de 2,885×10⁻¹³ s por segundo entre los dos relojes.</li><li>El reloj de cesio que define el segundo desde 1967 (9.192.631.770 oscilaciones) alcanza una precisión de alrededor de 10⁻¹⁶. Los relojes ópticos de iterbio trabajan a unas 518 billones de oscilaciones por segundo y apuntan a 10⁻¹⁸, lo que supone unas 56.000 veces más frecuencia.</li><li>La electrónica más rápida conmuta unos 10.000 millones de veces por segundo, unas 50.000 veces menos que la frecuencia óptica. El peine de frecuencias de Hänsch y Hall (Nobel 2005) resuelve el problema al crear una regla de frecuencias que conecta microondas con la luz visible.</li></ul>
+      <p class="rigor">📊 Las cifras son concretas, coherentes y comprobables (precisiones, frecuencias, predicción numérica), pero el video no cita artículos ni fuentes explícitas en pantalla, apoyándose en las declaraciones del NIST y en enlaces de la descripción; algunas simplificaciones, como presentar la gravedad como estiramiento del tiempo más que como curvatura del espacio-tiempo, no se matizan.<br>💡 Es una explicación científica muy bien construida y con datos precisos sobre metrología y física fundamental, aunque se aleja de tus temas de economía, finanzas e historia, su título sugiere más de lo que muestra (no hay resultado que contradiga a Einstein) y contiene un anuncio que no aporta nada.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="economía">
+    <a href="https://www.youtube.com/watch?v=Lj4uUaPl3jc" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/Lj4uUaPl3jc/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-alta">7/10</span>
+        Alux.com · 66 min · economía
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=Lj4uUaPl3jc" target="_blank" rel="noopener">How the Food Industry Actually Works</a></h3>
+      <p>El video recorre la historia de la industria alimentaria estadounidense, desde la integración vertical en el sector avícola y el empaquetado de carne en Chicago hasta la concentración actual en pocas empresas, muchas de ellas de capital extranjero. Conecta esa estructura con precios, subsidios, salud pública, condiciones laborales y crisis como la pandemia y la gripe aviar. Es denso e informativo, aunque interrumpido por publicidad y con partes repetitivas.</p>
+      <ul><li>La genética avícola combinó el concurso de 1948 con décadas de cría selectiva. Según un estudio de Poultry Science de 2014, la tasa de crecimiento del pollo de engorde subió más de 400% entre 1957 y la actualidad, mientras el alimento por libra ganada se redujo aproximadamente a la mitad.</li><li>Según un informe del USDA de 2023, los cuatro mayores procesadores controlaban el 77% del sacrificio de novillos y vaquillas en 2021, frente a alrededor del 25% en 1977. Un estudio de McDonald y Key de 2006 halló que los productores contratados con una sola integradora ganaban entre 7% y 8% menos que los que tenían cuatro o más opciones.</li><li>Tras la pandemia, una investigación de Myrna y Jason Lusk para la NBER (2021) mostró que la concentración no explica toda la volatilidad de precios: un sector más fragmentado evitaba mejor los peores escenarios cuando el riesgo de cierre de plantas aumentaba. Además, el video señala que en 2024 los agricultores recibieron 11,8 centavos por cada dólar gastado en alimentos producidos localmente.</li></ul>
+      <p class="rigor">📊 Usa fuentes identificables y en su mayoría verificables (USDA, NBER, Poultry Science, PLOS ONE, Journal of Agricultural and Applied Economics), y matiza sus conclusiones en varios puntos, pero algunas cifras clave carecen de fuente (por ejemplo, el ingreso por segundo de la industria cárnica o la participación de Cargill en el 70% de la cadena mundial) y ciertas relaciones causales se presentan con más seguridad de la que los datos permiten.<br>💡 Es una de las explicaciones más completas y documentadas que encontrarás en YouTube sobre cómo la concentración empresarial y la ingeniería de costos determinan el precio de la comida, aunque conviene verlo con criterio por el ritmo dramático, las repeticiones y los segmentos publicitarios.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="economía">
+    <a href="https://www.youtube.com/watch?v=v2egE2vWojU" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/v2egE2vWojU/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-media">6/10</span>
+        Geekonomy · 19 min · economía
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=v2egE2vWojU" target="_blank" rel="noopener">BRASIL tiene un PROBLEMA que LULA NO podrá RESOLVER</a></h3>
+      <p>El video sostiene que los problemas estructurales de Brasil (desindustrialización temprana, baja productividad, déficit educativo e informalidad) son históricos y no se resolverán con el cambio de gobierno. Lo apoya con un recorrido por el Barón de Mauá, el ciclo del café y el caucho, la sustitución de importaciones, las crisis de deuda y la comparación con Corea del Sur, cerrando con Embrapa como contraejemplo. La narración es sólida, pero tiene errores de datos y poca trazabilidad de fuentes.</p>
+      <ul><li>Corea del Sur y Brasil tenían niveles de renta similares o incluso inversos en 1960, pero Corea condicionó la protección estatal a metas de exportación verificables, mientras Brasil mantuvo mercados cerrados sin esa prueba de desempeño.</li><li>La deuda externa brasileña pasó de unos 12.500 millones de dólares en 1973 a más de 50.000 en 1980, con intereses variables que se encarecieron con el segundo choque petrolero y la subida de tipos de la Reserva Federal.</li><li>La manufactura bajó del 27% del PIB en 1985 a cerca del 12% en los años 2000, mientras que Embrapa elevó el rendimiento de la soja de 1,6 a más de 3,5 toneladas por hectárea entre 1980 y 2020, mostrando que la política industrial funciona cuando la producción debe competir en el mercado mundial.</li></ul>
+      <p class="rigor">📊 Usa abundantes cifras y episodios históricos, pero no cita fuentes en el video y contiene errores verificables: atribuye a Mauá la fundación del Banco do Brasil en 1851 (fue el Banco Mauá), y el nombre &#39;Ley 12.000&#39; para la norma de protección industrial parece erróneo o inventado. La transcripción también muestra cortes y tropiezos de edición.<br>💡 Ofrece un análisis histórico de largo plazo con una tesis original y bien argumentada sobre la diferencia entre protección y disciplina de mercado, pero conviene contrastar sus datos y fechas con fuentes primarias (Banco Central do Brasil, IBGE, Banco Mundial, Penn World Table) antes de tomarlos como referencia.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="geopolítica">
+    <a href="https://www.youtube.com/watch?v=R5rmEyQ5mDM" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/R5rmEyQ5mDM/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-media">6/10</span>
+        DW Documental · 54 min · geopolítica
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=R5rmEyQ5mDM" target="_blank" rel="noopener">Los recursos de Afganistán - La carrera ha comenzado | DW Documental</a></h3>
+      <p>Documental de DW que explora el potencial minero de Afganistán (cobre, litio, tierras raras, cobalto) bajo el régimen talibán, y cómo China, Rusia y otras potencias compiten por esos recursos en el contexto de la transición energética. Combina reportaje en Kabul y en minas artesanales con un marco histórico que va desde la ocupación soviética hasta el estudio estadounidense de 2010 sobre el valor de los yacimientos.</p>
+      <ul><li>El estudio del Departamento de Defensa de EE. UU. (2010) estimó el valor potencial de los yacimientos en más de un billón de dólares; el video no detalla la metodología ni la fiabilidad de esa cifra.</li><li>El yacimiento de cobre de Mes Aynak tiene una estimación de unos 57 millones de toneladas y un contrato chino de 2008 por 30 años con una inversión de unos 3.500 millones de dólares, aún sin extracción significativa; abrir una mina de cobre promedia 17 años.</li><li>China controla más del 80% del suministro de varios minerales críticos para la UE, y la UE fija como meta que al menos el 10% de sus 17 materias primas estratégicas se extraiga en su territorio.</li></ul>
+      <p class="rigor">📊 Usa algunas cifras concretas (1 billón de dólares, 57 Mt de cobre, 3.500 M$, 17 años, 80%, caída del PIB de 20,7%, tres de cada cuatro afganos en pobreza básica), pero casi no cita fuentes ni explica metodologías; varias cifras clave se presentan sin atribución y el contenido depende mucho de declaraciones de funcionarios talibanes que no pueden verificarse de forma independiente.<br>💡 Ofrece un ángulo poco cubierto sobre la geopolítica de los minerales críticos y la paradoja de la maldición de los recursos, pero su rigor analítico es moderado: vale la pena por el contexto y los testimonios, no por un análisis económico profundo al nivel de Geekonomy.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="historia">
+    <a href="https://www.youtube.com/watch?v=RQGFp87191g" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/RQGFp87191g/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-media">6/10</span>
+        DW Documental · 42 min · historia
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=RQGFp87191g" target="_blank" rel="noopener">Entre el zar y Hitler - La historia olvidada del Ejército Blanco | DW Documental</a></h3>
+      <p>El documental reconstruye la guerra civil rusa desde la caída del zar hasta la diáspora del Ejército Blanco, con foco en el oro del zar, la Hermandad de la Verdad Rusa y la entrega de los cosacos de Lienz por parte de los británicos en 1945. Aporta un episodio poco conocido, pero su rigor es irregular: mezcla cifras concretas con anécdotas y diálogos reconstruidos sin fuentes identificadas.</p>
+      <ul><li>Tras la Revolución de octubre, el oro del zar (unos 657 millones de rublos en lingotes y metales preciosos, transportados en 40 vagones por el Transiberiano hasta Omsk) terminó en gran parte en manos de Japón, con el que Kolchak había comprado armas.</li><li>Entre 1918 y 1922 entre 1,5 y 2,2 millones de personas abandonaron Rusia; tras la evacuación de Crimea en noviembre de 1920 llegaron a Constantinopla más de 150.000 soldados y civiles que luego se dispersaron por Europa y Manchuria.</li><li>En mayo-junio de 1945, unos 30.000 cosacos, familias incluidas, fueron entregados a la URSS en Lienz; según el relato, unos 2.400 oficiales fueron llamados a una falsa conferencia y se produjeron suicidios y ejecuciones en el campo de Peggetz, basándose los británicos en el Tratado de Yalta.</li></ul>
+      <p class="rigor">📊 Cita pocas fuentes: apenas menciona el Tratado de Yalta y algunas cifras sin referencia, mientras que muchos datos y testimonios llegan con fórmulas vagas (&#34;según testigos&#34;, &#34;existe el testimonio&#34;) y diálogos dramatizados no verificables; además omite el papel de los cosacos en las unidades de la Wehrmacht y de las SS, y presenta sin contexto creencias antisemitas del movimiento blanco.<br>💡 Es una de las pocas piezas en español que explica la tragedia de Lienz y la diáspora blanca con contexto histórico útil, pero conviene contrastar sus cifras y nombres con fuentes académicas y no tomar la narración emotiva como análisis.</p>
+    </div>
+  </article>
+  
+  <h2>🤷 Opcionales</h2>
+  
+  <article class="card" data-tema="geopolítica">
+    <a href="https://www.youtube.com/watch?v=QPpWpZEmgPA" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/QPpWpZEmgPA/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-media">5/10</span>
+        The Economist · 10 min · geopolítica
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=QPpWpZEmgPA" target="_blank" rel="noopener">Why Saudi Arabia and the UAE can&#39;t stop the Yemen war | The Economist</a></h3>
+      <p>Un análisis de dos analistas sobre la rivalidad entre Arabia Saudita y los Emiratos Árabes Unidos, que empezó como alianza y se ha convertido en competencia, con efectos en Yemen, Sudán y el Cuerno de África. Combina contexto histórico (la guerra fría en Yemen) con explicaciones sobre intereses de seguridad, comercio y seguridad alimentaria. Es un conversatorio de opinión experta más que una investigación con datos.</p>
+      <ul><li>Yemen fue dos países hasta la unificación de 1990, y el Yemen del Sur fue el único Estado comunista de Oriente Medio hasta entonces. Los EAU apoyan al separatista Consejo de Transición del Sur, mientras que Arabia Saudita prioriza la unidad del país; esa divergencia terminó con los saudíes obligando a los EAU a reducir su apoyo.</li><li>El Mar Rojo es un asunto de seguridad para Arabia Saudita, que lo usa como salida de exportaciones de petróleo tras el cierre del Estrecho de Ormuz, según el video; el estrecho en ese punto tendría unos 200 km. Los EAU, en cambio, priorizan inversiones en puertos e infraestructura costera.</li><li>Los países del Golfo compran tierras cultivables en el Cuerno de África, incluidas tierras fértiles de los EAU junto al Nilo en Sudán, para exportar alimentos al CCG. El video sostiene que la idea de controlar tierras es un error, porque el comercio alimentario se puede asegurar por las rutas marítimas.</li></ul>
+      <p class="rigor">📊 Casi no cita fuentes ni cifras verificables: solo aparecen la distancia de 200 km, la fecha de 1990 y afirmaciones como &#39;los estudios demuestran&#39; sin referencia, y varias tesis dependen de la opinión de los analistas (animosidad personal entre príncipes, Hemeti lavando dinero a través del Golfo).<br>💡 Ofrece contexto útil y una mirada clara sobre la lógica de la rivalidad del Golfo, pero como análisis de opinión sin datos ni fuentes queda lejos del rigor de Geekonomy; conviene verlo como complemento y contrastar sus afirmaciones con fuentes primarias.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="economía">
+    <a href="https://www.youtube.com/watch?v=LP69pV5njPc" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/LP69pV5njPc/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-media">5/10</span>
+        Si lo hubiera sabido · 17 min · economía
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=LP69pV5njPc" target="_blank" rel="noopener">La gran paradoja detrás del éxito económico de China - Si lo hubiera sabido</a></h3>
+      <p>El video plantea que la economía dual china (producción industrial de alta tecnología muy potente frente a hogares que consumen poco) no es un error transitorio, sino un modelo que financia la industria estratégica con el ahorro forzoso de las familias. Después describe la guerra de precios, la deflación, las empresas zombi y el callejón sin salida de la política económica china. La tesis es interesante, pero el enfoque se apoya más en la narración dramática que en un análisis riguroso.</p>
+      <ul><li>El consumo de los hogares ronda el 39% del PIB frente al 60-70% de las economías avanzadas. El ahorro se canaliza, mediante una cuenta de capital cerrada y bancos estatales, hacia sectores estratégicos como los vehículos eléctricos, las baterías y la alta tecnología, lo que ofrece capital barato a la industria.</li><li>China registra más de 30 meses consecutivos de caídas de los precios de fábrica (deflación). Los salarios del sector privado urbano han pasado de crecer más del 8% antes de la pandemia a rozar el 1% en 2025, y BYD, pese a ser el mayor vendedor mundial de eléctricos con 4,6 millones de unidades en 2025, vio caer su beneficio cerca de un 20%.</li><li>Las empresas zombi suponen más del 12% de las cotizadas chinas, el doble de la media mundial, y el paro juvenil (sin contar estudiantes) se sitúa entre el 16% y el 17%. Estos datos sustentan la afirmación de que los tres instrumentos habituales (tipos, gasto público y quiebras) están prácticamente bloqueados.</li></ul>
+      <p class="rigor">📊 Aporta muchas cifras (30% de la producción industrial, 80-95% de la capacidad solar, 39% de consumo, 1% de crecimiento salarial, 16-17% de paro juvenil), pero no cita ninguna fuente y mezcla datos concretos con atribuciones vagas («las previsiones dicen», «decenas de marcas podrían quebrar»). Además, tiene errores de transcripción o terminología: «Deep Shik» (DeepSeek) y «Neixuan» (neijuan, 内卷), y usa «involución» como traducción sin matizar.<br>💡 Sirve como introducción a la economía dual china y a sus problemas de demanda, pero conviene contrastar sus cifras con fuentes primarias (FMI, Oficina Nacional de Estadística de China, informes de la OCDE) porque el tono sensacionalista y la falta de citas limitan su fiabilidad.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="historia">
+    <a href="https://www.youtube.com/watch?v=pEkHET4Vxw8" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/pEkHET4Vxw8/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-baja">4/10</span>
+        FD Finance · 41 min · historia
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=pEkHET4Vxw8" target="_blank" rel="noopener">The New Rise of Communism: Is Capitalism Coming to an End? | Part 1 | FD Finance</a></h3>
+      <p>Narra la historia del comunismo desde Marx y Engels hasta la caída de la URSS, con énfasis en Lenin, Stalin, el Gulag, el Holodomor y la Guerra Fría. Usa testimonios y material de archivo, pero el tono es narrativo y dramático, con poco análisis económico. Anuncia una segunda parte sobre China y Venezuela que no se evalúa aquí.</p>
+      <ul><li>Entre 1930 y 1933 se deportó a unos 1,8 millones de campesinos propietarios, se nacionalizaron sus granjas y muchos fueron enviados a campos de trabajo; el Gulag llegó a tener alrededor de mil campos.</li><li>El Holodomor (Ucrania, 1932-1933) causó al menos 5 millones de muertes, según la cifra que cita el video, mientras la URSS exportaba grano; la cifra es una estimación habitual, pero el video no detalla su metodología.</li><li>Entre 1937 y 1938 la policía secreta soviética ejecutó a unos 680.000 personas, según el video; además sostiene que en ese periodo unos 2 millones terminaron en el Gulag, sin citar fuente.</li></ul>
+      <p class="rigor">📊 Cita un estudio británico de 2021 y una encuesta de la Victims of Communism Foundation (organización con un enfoque anticomunista explícito), pero sin datos verificables en pantalla; hay afirmaciones sin fuente (como &#39;el 70% de los millennials votaría socialista&#39;) y errores o imprecisiones (habla de &#39;nueve décadas&#39; de la URSS, que duró unas siete, y atribuye a Yeltsin el fin del gobierno comunista en 1990 de forma simplificada).<br>💡 Sirve como introducción divulgativa a la historia soviética, pero para un análisis riguroso del comunismo conviene buscar trabajos que combinen datos económicos y fuentes primarias, algo que este video no ofrece.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="historia">
+    <a href="https://www.youtube.com/watch?v=2CRV8i4WYLE" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/2CRV8i4WYLE/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-baja">4/10</span>
+        Extra History · 35 min · historia
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=2CRV8i4WYLE" target="_blank" rel="noopener">Eleanor of Aquitaine | Extra History Complete | European History</a></h3>
+      <p>Narración biográfica de Leonor de Aquitania, desde su matrimonio con Luis VII hasta su papel como regente y matriarca en la familia Plantagenet, pasando por el Imperio angevino y las guerras entre sus hijos. Es entretenida y bien hilada, pero funciona más como relato divulgativo que como análisis histórico.</p>
+      <ul><li>Su primer matrimonio con Luis VII (1137) y su posterior anulación (1152) ilustran cómo las alianzas dinásticas y la falta de un heredero varón determinaban el destino de los territorios; Aquitania pasaba a sus hijas salvo que naciera un varón.</li><li>Con Enrique II, su unión sumó Aquitania, Normandía e Inglaterra en un territorio que iba de la frontera escocesa a la española, base del llamado Imperio angevino, y dio lugar a 8 hijos en 14 años (10 en total con ambos maridos).</li><li>La captura de Ricardo Corazón de León en 1192 llevó a un rescate de 150.000 marcos, más del doble de los ingresos anuales de la corona inglesa, y Leonor, de unos 71 años, dirigió su recaudación.</li></ul>
+      <p class="rigor">📊 Usa casi exclusivamente la narrativa, con fuentes mencionadas de forma vaga («algunos historiadores», «según la mayoría de los relatos») sin citas concretas, y mezcla hechos documentados con anécdotas dudosas (la cama del Papa, el asesinato de Becket «ordenado accidentalmente», la «hija de Satanás»), sin distinguir bien entre ambas.<br>💡 Ofrece una buena panorámica de un personaje histórico clave y del contexto dinástico europeo, pero le faltan fuentes verificables, contraste historiográfico y profundidad analítica, y está lejos del nivel de Geekonomy; conviene verlo como introducción y contrastarlo con fuentes académicas.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="historia">
+    <a href="https://www.youtube.com/watch?v=ayRf1tdbyRA" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/ayRf1tdbyRA/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-baja">4/10</span>
+        Historia en Podcast · 55 min · historia
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=ayRf1tdbyRA" target="_blank" rel="noopener">OPUS DEI: una historia de fe, poder y disciplina en la Iglesia</a></h3>
+      <p>Recorrido narrativo por la fundación del Opus Dei (Madrid, 1928), su estructura jurídica como prelatura personal, su vínculo con el franquismo y las denuncias recientes de exmiembros, especialmente de las numerarias auxiliares. Intenta equilibrar la versión oficial con las críticas, pero lo hace en un formato oral, repetitivo y con mucho relleno.</p>
+      <ul><li>El Opus Dei se fundó el 2 de octubre de 1928 en Madrid. Su figura central, José María Escrivá de Balaguer, fue canonizado en 2002. La prelatura personal fue concedida por Juan Pablo II en 1982.</li><li>Según la propia institución, tiene unos 93.600 miembros, de los cuales unos 2.100 son sacerdotes, y alrededor del 70% son supernumerarios. Son cifras que el propio Opus Dei informa, sin verificación independiente en el episodio.</li><li>Entre 1939 y 1975, 8 de los 116 ministros de Franco pertenecieron al Opus Dei, según cifras de la propia institución. El video distingue bien entre presencia de miembros en el gobierno y control institucional, y señala que esto último no tiene respaldo documental suficiente.</li></ul>
+      <p class="rigor">📊 Usa cifras y fechas precisas, pero casi todas provienen de la propia institución o se mencionan sin fuente concreta (por ejemplo, &#39;el Financial Times&#39; sin detalle del trabajo). Además, hay imprecisiones en la cronología del reconocimiento pontificio (1946 y 1947 se mezclan) y el cierre del tema cae en afirmaciones poco documentadas.<br>💡 Sirve como introducción general y plantea bien el dilema entre santidad cotidiana y control de la vida privada, pero para un análisis riguroso falta citar fuentes, ordenar el discurso y eliminar la gran cantidad de digresiones y promoción propia.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="historia">
+    <a href="https://www.youtube.com/watch?v=mrT2OkimkvU" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/mrT2OkimkvU/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-baja">4/10</span>
+        Diana Uribe · 48 min · historia
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=mrT2OkimkvU" target="_blank" rel="noopener">50 años de la dictadura argentina</a></h3>
+      <p>Recorrido narrativo por la dictadura argentina (1976-1983), desde el contexto de la Guerra Fría y la Doctrina de Seguridad Nacional hasta la guerra de las Malvinas, la transición democrática y la labor de las Madres de Plaza de Mayo. Tiene valor emocional y ofrece un buen panorama general, pero casi no sustenta sus afirmaciones con datos ni fuentes.</p>
+      <ul><li>El golpe del 24 de marzo de 1976 se enmarca en la Guerra Fría y la Doctrina de Seguridad Nacional, que redefinió a los ejércitos latinoamericanos en torno a un &#39;enemigo interno&#39; y que se articuló con el Plan Cóndor entre Argentina, Uruguay, Paraguay, Brasil y Chile.</li><li>La cifra de desaparecidos se presenta como un rango de 8.000 a 60.000 sin citar fuente; el informe Nunca Más de la CONADEP (1984), presidida por Ernesto Sábato, es la referencia documental que se menciona, pero no se detallan sus cifras.</li><li>La guerra de las Malvinas (abril-junio de 1982, unos 74 días) precipitó el colapso de la junta; el episodio de las donaciones desviadas y la corrupción militar se narra como hecho, sin documentación concreta.</li></ul>
+      <p class="rigor">📊 No cita fuentes, estudios ni documentos verificables, y contiene imprecisiones: presenta como &#39;leyes de perdón y olvido&#39; las normas de amnistía y punto final, atribuye erróneamente a &#39;México&#39; la ausencia de ADN y maneja cifras de desaparecidos sin contexto metodológico.<br>💡 Sirve como introducción emotiva y contextual a una etapa clave de la historia argentina, pero para un espectador exigente que busca datos y análisis riguroso conviene complementarlo con el informe Nunca Más, trabajos académicos o documentales con fuentes primarias.</p>
+    </div>
+  </article>
+  
+  <article class="card" data-tema="economía">
+    <a href="https://www.youtube.com/watch?v=HWp-e1d0e4M" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/HWp-e1d0e4M/hqdefault.jpg" alt="" loading="lazy">
+    </a>
+    <div>
+      <div class="meta">
+        <span class="nota n-baja">3/10</span>
+        VisualEconomik · 21 min · economía
+      </div>
+      <h3><a href="https://www.youtube.com/watch?v=HWp-e1d0e4M" target="_blank" rel="noopener">La DEUDA de EEUU es PEOR de lo que pensábamos por culpa de la IA @VisualEconomik</a></h3>
+      <p>El video presenta el modelo de Jesús Fernández Villaverde (&#34;Saving for the Machines&#34;) para sostener que la inversión masiva en IA elevaría los tipos de interés reales y dispararía la deuda de EE. UU. hasta niveles insostenibles, con Europa en peor situación. Lo argumenta con escenarios extremos y alarmistas, y buena parte del metraje es publicidad de un máster de la propia Visual Business School.</p>
+      <ul><li>Según el escenario principal del modelo citado, el tipo de interés real a 10 años subiría del 5,1% al 13,6%, y la deuda de EE. UU. pasaría de cerca del 100% del PIB a unos 300% en 2040 y más del 900% en 2045.</li><li>EE. UU. paga más de un billón de dólares anuales en intereses (unos 3.000 millones al día) y más de 10 billones de deuda vencen en 12 meses, lo que obliga a refinanciar a tipos más altos que los de 2021.</li><li>Las grandes tecnológicas invierten más de 700.000 millones de dólares este año y emiten bonos que compiten con el Tesoro por el ahorro; en el escenario extremo, España necesitaría un superávit primario de hasta el 44% del PIB a largo plazo para estabilizar su deuda.</li></ul>
+      <p class="rigor">📊 Se apoya en un trabajo académico real y en citas a la Oficina Presupuestaria del Congreso y a un informe de PwC, pero no enlaza fuentes ni distingue bien entre escenarios hipotéticos y datos observados, y presenta como señales ya visibles un modelo especulativo; además contiene cifras incoherentes (un tipo real del 277% a 10 años o un crecimiento del 22%) que indican falta de revisión.<br>💡 El argumento central es un escenario extremo de un modelo presentado casi como inevitable, con sensacionalismo (&#34;bola de nieve&#34;, &#34;infierno en la tierra&#34;) y un porcentaje considerable de publicidad; si te interesa, es mejor leer directamente el paper original.</p>
+    </div>
+  </article>
+  
+
+  
+  <h2>🎸 Hobbies</h2>
+  <div class="hobby">
+    
+    <a href="https://www.youtube.com/watch?v=zdKaYzm6CM0" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/zdKaYzm6CM0/mqdefault.jpg" alt="" loading="lazy">
+      Global Triathlon Network: Can We Beat The Slowest Pro In The Kona Swim?
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=UEeDO2BDTdY" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/UEeDO2BDTdY/mqdefault.jpg" alt="" loading="lazy">
+      GCN en Español: ¿Las pastillas de frenos baratas son peligrosas?
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=Ymx4MfmEWmw" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/Ymx4MfmEWmw/mqdefault.jpg" alt="" loading="lazy">
+      Global Cycling Network: Am I Faster Than The Slowest Pro?
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=oiUYRy63ww8" target="_blank" rel="noopener">
+      <img src="https://i.ytimg.com/vi/oiUYRy63ww8/mqdefault.jpg" alt="" loading="lazy">
+      MrShortGame Golf: EVERYTHING You Ever Wanted to Know about How to Spin Your Wedge Shots in One Video!
+    </a>
+    
+  </div>
+  
+</div>
+
+<script>
+  // Filtro por tema: oculta las tarjetas que no coinciden
+  document.querySelectorAll('.filtros button').forEach(boton => boton.onclick = () => {
+    document.querySelectorAll('.filtros button').forEach(b => b.classList.remove('activo'));
+    boton.classList.add('activo');
+    const tema = boton.dataset.tema;
+    document.querySelectorAll('.card').forEach(c =>
+      c.style.display = (tema === 'todos' || c.dataset.tema === tema) ? '' : 'none');
+  });
+</script>
+</body>
+</html>
